@@ -1,0 +1,31 @@
+week-2:-Implement a simple map-reduce job that builds an inverted index on the set of input documents
+(Hadoop).
+
+1.open vm ware start ubunt then open terminal
+2.hadoop version
+3.java –version
+4.start-all.sh
+5.jps
+6.hadoop-3.4.0/bin/hdfs namenode –format
+7.start-all.sh
+8.open browser http://localhost:9870
+9.open intellij idea click on new project give the name of the project
+10.select maven goto advance give the group id name org.dsbda
+11.remove main class
+12.create dependencies in org.dsbda copy the dependencies code from the git hub
+github.com/ rishikumar1992/DSBDA-LAB
+13.go to maven click on the project name reload all projects
+14.create the 3 java classes WC_Mapper ,Reducer,Runner copy the code from git hub
+15.create jar file ---> click on maven clean enter and maven install
+16.target folder will be created which contains jar file
+17.goto ubuntu tewrminal create the text file input2.txt
+18.nano sample.txt
+19.write some text with repeated words
+20.cntrl+o enter cntrl+x
+21.cat input.txt
+22.create the folder on the localhost hadoop fs -mkdir /input2
+23.hadoop fs -put sample.txt /input2
+24.back to the local host check the file system
+25.back to the intellij go to terminal hadoop jar target/week2-1.0-SNAPSHOT.jar org.dsbda.WC_Runner
+/input2/input2.txt /output2
+26.back to the local host check the file system

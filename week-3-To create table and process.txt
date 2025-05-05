@@ -1,0 +1,29 @@
+week-3:-To create table and process the big data in Hbase.
+
+1.Creating table in hbase
+create ‘customer’,’customer_info’,’customer_details’
+2.To list the tables in hbase: 
+list
+3.To insert values into table:
+put ‘customer’,’1’,’customer_info:name’,’sita’
+put ‘customer’,’1’,’customer_details:mobile’,’9999999999’
+4. To display the contents of the table
+get ‘customer’,’1’
+5.To insert other values into table:
+put ‘customer’,’1’,’customer_info:age’,’25’
+put ‘customer’,’1’,’customer_details:email’,’sita@gmail.com’
+6. To display the contents of the table
+get ‘customer’,’1’
+7. To insert other row
+put ‘customer’,’2’,’customer_info:name’,’rama’
+put ‘customer’,’2’,’customer_details:mobile’,’9898999999’
+put ‘customer’,’2’,’customer_info:age’,’28’
+put ‘customer’,’2’,’customer_details:email’,’rama@gmail.com’
+8.To update the details
+put 'customer', '1', '’customer _info:name', 'John' # Update name
+put 'customer', '1', '’customer _info:age', '31' # Update age
+scan customer;
+9. Delete an entire row (all columns) from the table:
+deleteall 'customer', '1'
+10. Delete a specific column from a row:
+delete 'customer', '1', 'customer_details:mobile’

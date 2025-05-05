@@ -1,0 +1,58 @@
+week-8:-Implement one of the following case studies using big data analytics:
+
+Procedure: step:-1
+ Open tableau public and insert the exel sheet data (pateint_blood_test)
+ Create new sheet and rename as patient count ,set the font style,size,color
+ Drag sheet1(count) to rows then select text table
+ Right click on count(50) format select worksheet -> change font color and size
+Then go to allignment -> pane-> center
+step:-2
+ Duplicat patient count and rename avarage age
+ Remove previous sheet count by draging left side of the screen
+ Drag age to rows and convert SUM( age) to AVG(age)
+ Right click on avarage age format select worksheet -> change font color and size
+Then go to allignment -> pane-> center
+STEP 3:
+ Duplicat average age and rename avarage Hemoglobin
+ Remove previous sheet average age by draging left side of the screen
+ Drag age to rows and convert SUM( Hemoglobin) to AVG(Hemoglobin)
+ Right click on avarage Hemoglobin format select worksheet -> change font color and size Then go to
+allignment -> pane-> center
+Step:-4
+ Duplicate average Hemoglobin and rename average Glucose
+ Remove previous sheet average Hemoglobin by draging left side of the screen
+ Drag age to rows and convert SUM( Glucose) to AVG(Glucose)
+ Right click on avarage Glucose format select worksheet -> change font color and size Then go to
+allignment -> pane-> center
+Step:-5
+ Click on dash board symbol.
+ Click on objects->Text and type Patient blood test analysis dash board.
+ Right Click on patient blood test analysis dash board ->size-> change maximum size to 950px
+ Drag from sheets paitent count,average age, average hemoglobin,average Glucose .
+ Select patient count window and right click and select fit-> fit width
+ Select Average age window and right click and select fit-> fit width
+ Select Average Hemoglobin window and right click and select fit-> fit width
+ Select Average Glucose window and right click and select fit-> fit width
+Step:6
+ Select new sheet and name it as count of patient by gender
+ Drag Gender to columns and Sheet1(count) to rows
+ Select pie chart
+ To label the pie chart drag gender to label and sheet1 (count) to label.
+ Go to dash board and from sheets drag patient by gender to the down of the
+Patient count.
+Step 7:- Select new sheet and name it as Age Distribution.
+ Drag Age to columns and Sheet1(count) to rows
+ And select histogram
+ Left hand side table click on Age(bin)->edit-> change the bin size to 10.
+ Go to dash board and from sheets drag Age distribution to the down of the
+Avg age.
+Step 8:- Select new sheet and name it as WBC VS PATELETS
+ Drag platelets to columns and WBC to rows or vice versa
+ Select Scatter plots
+Go to Analysis on menu bar-->Aggregate measures
+ Go to Analysis on menu bar-->trend lines-->show trend lines
+ Go to dash board and from sheets drag WBC VS PATELETS to the down of the avg hemoglobin.
+Step 9:- Select age distribution sheet and rename it as cholesterol insights
+ Drag cholesterol to columns
+ Select histogram and click on swap rows and column symbol
+Go to dash board and from sheets drag cholesterol insights to the down of the avg glucose

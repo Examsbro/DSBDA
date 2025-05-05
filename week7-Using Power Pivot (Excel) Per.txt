@@ -1,0 +1,33 @@
+week7:-Using Power Pivot (Excel) Perform the following on any dataset:
+a) Big Data Analytics b) Big Data Charting
+
+1. Open Ubuntu
+2.start libra office calc
+3. got to file -> open -> load data to libra office calc
+4. Formatting date using function
+5. Go to cell D -> right click and insert column before
+New column will be created
+Name it as “Formatted Dates”
+6. Formula for converting date dd/mm/yyyy to date month year
+=TEXT(C2,”d mmmm yyyy”)
+7. Upon cell D -> right click and insert column after
+New column will be created
+Name it as “Year”
+8.Select E column -> data -> sort ascending then click on extend selection an click on ok
+Data Analysis:
+ Which category of products with the highest sales?
+ Which sub-category has the highest sales?
+ Which region drives the most sales to this super store?
+Pivot Tables and Charts:
+ Which category of products with the highest sales?
+1. Select data tab and go to pivot table (insert or edit) select source current selection then click
+on ok
+2. Drag category into row fields and sales into data fields then click on ok
+3. It will be display like this
+4. Go to insert >chart>pie>3D look create tittle name “sales by category”
+Which sub-category has the highest sales
+Drag sub-category into row fields and sales into data fields then click on ok
+Go to insert >chart>bar chart>3D look create tittle name “sales by sub-category”
+Which region drives the most sales to this super store.
+Drag region into row fields and sales into data fields then click on ok
+Go to insert >chart>bar chart>3D look create tittle name “sales by region”

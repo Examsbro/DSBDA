@@ -1,0 +1,37 @@
+week-9:-Extract Sample document and apply following document preprocessing methods:
+Tokenization, POS Tagging, stop words removal, Stemming and Lemmatization.
+
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk import pos_tag
+from nltk.stem import PorterStemmer
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+x = open("testdoc.txt").read()
+x
+import nltk
+nltk.download('punkt_tab')
+tokens = word_tokenize(x)
+print(tokens)
+import nltk
+nltk.download('averaged_perceptron_tagger_eng')
+postags = pos_tag(tokens)
+print(postags)
+stop_words = set(stopwords.words('english'))
+print(stop_words)
+li = []
+for word in tokens:
+    if word.lower() not in stop_words:  # Use .lower() to match stop words correctly
+        li.append(word)
+print(li)
+ps = PorterStemmer()
+stemlist = []
+for word in li:
+    stemlist.append([word, ps.stem(word)])
+print(stemlist)
+from nltk.stem import WordNetLemmatizer
+wl = WordNetLemmatizer()
+lemilist = []
+for word in li:
+    lemilist.append([word, wl.lemmatize(word)])
+print(lemilist)
