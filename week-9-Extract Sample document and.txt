@@ -35,3 +35,7 @@ lemilist = []
 for word in li:
     lemilist.append([word, wl.lemmatize(word)])
 print(lemilist)
+
+
+The quick brown fox jumps over the lazy dog. 
+John's laptop isn't working properly because the software was not updated.
