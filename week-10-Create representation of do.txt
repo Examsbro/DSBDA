@@ -16,3 +16,7 @@ def compute_tfidf_from_file(file_path):
         print("\n")
 file_path = "doc.txt"  # Replace this with the path to your text file
 compute_tfidf_from_file(file_path)
+
+"the cat in the hat.",
+"the dog barked at the cat.",
+"the cat and the dog are friends."
