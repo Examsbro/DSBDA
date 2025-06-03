@@ -1,0 +1,36 @@
+week-13-Use R-Project for data visualization of social media data.
+install.packages("tidyr")
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(stringr)
+
+data <- read.csv("socialmedia.txt", stringsAsFactors = FALSE)
+
+hashtag_data <- data %>%
+  separate_rows(Hashtags, sep = ",") %>%
+  mutate(Hashtags = str_trim(Hashtags))
+
+hashtag_freq <- hashtag_data %>%
+  group_by(Hashtags) %>%
+  summarise(Frequency = n())
+
+ggplot(hashtag_freq, aes(x = reorder(Hashtags, Frequency), y = Frequency, fill = Hashtags)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Hashtag Frequency", x = "Hashtag", y = "Count") +
+  theme_minimal()
+
+sentiment_freq <- data %>%
+  count(Sentiment)
+
+ggplot(sentiment_freq, aes(x = "", y = n, fill = Sentiment)) +
+  geom_col(width = 1) +
+  coord_polar(theta = "y") +
+  labs(title = "Tweet Sentiment Distribution") +
+  theme_void()
+
+ggplot(data, aes(x = Likes, y = Retweets, color = Sentiment)) +
+  geom_point(size = 4) +
+  labs(title = "Engagement: Likes vs. Retweets", x = "Likes", y = "Retweets") +
+  theme_minimal()
